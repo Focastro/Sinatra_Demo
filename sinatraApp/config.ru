@@ -17,3 +17,5 @@ run Rack::URLMap.new({
 #Esta es la configuracion de la base de datos
 require 'data_mapper'
 DataMapper.setup(:default, 'sqlite::memory:')
+
+require './app'
