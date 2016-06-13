@@ -37,7 +37,7 @@ post '/computers/:id' do
 
   if @computer.save
     flash[:message] = 'Computer Saved!'
-    redirect "/computers/#{@Computer.id}"
+    redirect "/computers/#{@computer.id}"
   else
     erb :'computers/edit'
   end

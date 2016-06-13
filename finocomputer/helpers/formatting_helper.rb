@@ -1,10 +1,10 @@
-helpers do 
+helpers do
 
   def formating_price(price_cents)
-    "$#{'%.2f' % (price_cents.to_i / 100.0)}"
+    "$#{'%.2f' % (price_cents.to_i)}"
   end
 
-  def formating_diameter(inches)
-    "#{inches.to_i} inches"
+  def formating_diameter(age)
+    "#{age.to_i} Age"
   end
 end

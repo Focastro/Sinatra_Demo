@@ -1,11 +1,11 @@
 <div class="card large">
   <div class="card-image">
-   <img src="/images/pizza.jpg" alt="" class="circle">
+   <img src="/images/fondo.jpg" alt="" class="circle">
     <span class="card-title"><%= @computer.name %></span>
   </div>
   <div class="card-content">
     <p><%= formating_price @computer.price_cents %></p>
-    <p><%= formating_diameter @computer.diameter_inches %></p>
+    <p><%= formating_diameter @computer.modelo %></p>
   </div>
   <div class="card-action">
     <a href="/computers/<%= @computer.id %>/edit">Edit</a>
