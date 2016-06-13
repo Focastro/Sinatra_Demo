@@ -1,0 +1,36 @@
+
+<form class="col s12" action="<%= computer.id.nil? ? '/computers' : "/computers/#{computer.id}" %>" method="post">
+  <div class="row">
+<% if computer.errors[:name].any? %>
+    <div style="color: red;"><%= computer.errors[:name].first %></div>
+<% end %>
+    <div class="input-field col s12">
+      <input name="name" type="text" class="validate" value="<%= computer.name %>">
+      <label for="name">Name</label>
+    </div>
+  </div>
+
+
+  <div class="row">
+<% if computer.errors[:modelo].any? %>
+    <div style="color: red;"><%= computer.errors[:modelo].first %></div>
+<% end %>
+    <div class="input-field col s12">
+      <input name="modelo" type="text" value="<%= computer.modelo %>">
+      <label for="modelo">Modelo</label>
+    </div>
+  </div>
+
+
+  <div class="row">
+<% if computer.errors[:price_cents].any? %>
+    <div style="color: red;"><%= computer.errors[:price_cents].first %></div>
+<% end %>
+    <div class="input-field col s12">
+      <input name="price_cents" type="text" class="validate" value="<%= computer.price_cents %>">
+      <label for="price_cents">Price</label>
+    </div>
+  </div>
+
+  <input class="btn" type="submit" name="action" value="<%= computer.id.nil? ? 'Add' : 'Save' %>"/>
+</form>

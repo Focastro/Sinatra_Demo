@@ -1,0 +1,16 @@
+<h1>All Computers</h1>
+
+<% if auth_logged_in? %>
+  <div class="row">
+    <div class="col s12">
+      <a class="btn" id="new-computer-form-container-button" href="/computers/new">New Computer</a>
+    </div>
+    <div id="new-computer-form-container" class="col s12" style="display: none;"></div>
+  </div>
+<% end %>
+
+<div id="computers" class="row">
+<% @computers.each do |computer| %>
+  <%= erb :'computers/_item', locals: {:computer => computer } %>
+<% end %>
+</div>

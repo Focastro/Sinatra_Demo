@@ -5,9 +5,6 @@ Bundler.require
 $: << File.expand_path('../', __FILE__)
 $: << File.expand_path('../lib', __FILE__)
 
-require 'dotenv'
-Dotenv.load
-
 require 'sinatra/base'
 require 'sinatra/reloader' if development? # sinatra-contrib
 require 'sinatra/activerecord'
@@ -32,6 +29,6 @@ module Shortened
       }
     end
 
-    use Routes::Api::V1::Links
+
   end
 end

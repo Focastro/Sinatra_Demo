@@ -1,0 +1,7 @@
+<h2>Top Computers</h2>
+
+<div id="computers" class="row">
+  <% @computers.each do |computer| %>
+    <%= erb :'computers/_item', locals: {:computer => computer } %>
+  <% end %>
+</div>

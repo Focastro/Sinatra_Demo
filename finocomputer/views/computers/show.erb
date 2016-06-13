@@ -1,0 +1,17 @@
+<div class="card large">
+  <div class="card-image">
+   <img src="/images/pizza.jpg" alt="" class="circle">
+    <span class="card-title"><%= @computer.name %></span>
+  </div>
+  <div class="card-content">
+    <p><%= formating_price @computer.price_cents %></p>
+    <p><%= formating_diameter @computer.diameter_inches %></p>
+  </div>
+  <div class="card-action">
+    <a href="/computers/<%= @computer.id %>/edit">Edit</a>
+    <a class="post_link" data-form-id="#post_form" data-confirm="Are you sure?" href="/computers/<%= @computer.id %>/delete">Delete</a>
+   </div>
+</div>
+
+<form id="post_form" class="hide" action="" method="post"></form>
+

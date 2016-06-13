@@ -1,0 +1,23 @@
+source "https://rubygems.org"
+
+ruby '2.2.3'
+
+gem "sinatra"
+gem "sinatra-activerecord"
+gem "rake"
+gem "sinatra-flash"
+gem "bcrypt-ruby"
+#gem "pg"
+gem 'mysql2', '~> 0.3.13'
+gem 'thin'
+
+
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+  gem "shotgun"
+  gem "database_cleaner"
+  gem "rack-test"
+  gem "rspec", "~>3.3"
+end
+
